@@ -33,13 +33,13 @@ function CodeEditor() {
       <div className="bg-black text-[#ddd] min-h-screen py-4 px-8">
         <div className="flex flex-col gap-5 md:flex-row md:gap-0 ">
           <div className="w-full md:w-1/3">
-            <div className="flex items-center bg-[#1E1E1E] rounded-sm">
-              <FaHtml5 className="text-xl mr-2 ml-4 my-4 fill-orange-400" />
-              <h2 className="text-xl font-semibold mb-2 items-center">HTML</h2>
+            <div className="flex items-center px-4 py-4 bg-[#1E1E1E] rounded-sm">
+              <FaHtml5 className=" mr-2 fill-orange-400" />
+              <h2 className="text-lg font-semibold items-center">HTML</h2>
             </div>
 
             <Editor
-              height="50vh"
+              className="h-[30vh] md:h-[50vh]"
               defaultLanguage="html"
               value={html}
               onChange={(value) => setHtml(value)}
@@ -47,12 +47,12 @@ function CodeEditor() {
             />
           </div>
           <div className="w-full md:w-1/3 md:px-2">
-            <div className="flex items-center  bg-[#1E1E1E] rounded-sm">
-              <FaCss3Alt className="text-xl mr-2 ml-4 my-4 fill-cyan-400" />
-              <h2 className="text-xl font-semibold mb-2 items-center">CSS</h2>
+            <div className="flex items-center px-4 py-4 bg-[#1E1E1E] rounded-sm">
+              <FaCss3Alt className=" mr-2 fill-cyan-400" />
+              <h2 className="text-lg font-semibold items-center">CSS</h2>
             </div>
             <Editor
-              height="50vh"
+               className="h-[30vh] md:h-[50vh]"
               defaultLanguage="css"
               value={css}
               onChange={(value) => setCss(value)}
@@ -60,14 +60,14 @@ function CodeEditor() {
             />
           </div>
           <div className="w-full md:w-1/3">
-            <div className="flex items-center bg-[#1E1E1E] rounded-sm">
-              <IoLogoJavascript className="text-xl mr-2 ml-4 my-4 fill-yellow-400" />
-              <h2 className="text-xl font-semibold mb-2 items-center">
+            <div className="flex items-center px-4 py-4 bg-[#1E1E1E] rounded-sm">
+              <IoLogoJavascript className=" mr-2 fill-yellow-400" />
+              <h2 className="text-lg font-semibold items-center">
                 JavaScript
               </h2>
             </div>
             <Editor
-              height="50vh"
+               className="h-[30vh] md:h-[50vh]"
               defaultLanguage="javascript"
               value={js}
               onChange={(value) => setJs(value)}
@@ -81,7 +81,7 @@ function CodeEditor() {
           <iframe
             id="preview"
             title="Preview"
-            className="w-full h-screen bg-white rounded-md"
+            className="w-full md:h-screen bg-white rounded-md"
             style={{ resize: "vertical" }}
           />
         </div>
