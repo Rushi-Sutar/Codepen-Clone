@@ -4,4 +4,5 @@
 body{
     max-width: 1376px;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
