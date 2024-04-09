@@ -1,17 +1,29 @@
-import './App.css'
-import CodeEditor from './components/CodeEditor'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
+import CodeEditor from "./components/CodeEditor";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Hero />,
+  },
+  {
+    path: "/editor",
+    element: <CodeEditor />,
+  },
+]);
 
 function App() {
-
   return (
     <>
       <Navbar />
-      <CodeEditor />
-      <Footer/>
+      <RouterProvider router={router} />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
